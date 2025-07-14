@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right,rgb(107, 107, 249), rgb(137, 137, 139));
+            text-align: center;
+            font-size: 25px;
+            justify-items: center;
+            height : 150vh;
+
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap : 10px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            padding : 20px;
+            border-radius: 10px;
+            background: linear-gradient(to right,rgb(65, 243, 234),rgb(6, 170, 143));
+        }
+        input{
+            padding:10px;
+            width : 300px;
+                        border-radius: 10px;
+
+
+        }
+        button{
+            padding : 10px;
+            width : 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SignUp</h1>
+    <form action="/user" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" required />
+        <label for="email">Email Address</label>
+        <input type="text" name="email" required />
+        <label for="password">Password</label>
+        <input type="text" name="password" required />
+        <button type="submit">Signup</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right,rgb(107, 107, 249), rgb(137, 137, 139));
+            text-align: center;
+            font-size: 25px;
+            justify-items: center;
+            height : 150vh;
+            margin:0;
+            padding: 0;
+
+        }
+        label{
+            font-weight: 600;
+        }
+        input,button{
+            padding : 10px;
+            font-size: 25px;
+            border-radius: 8px;
+            border: none;
+        }
+        button{
+            background-color: rgb(9, 202, 57);
+            border : none;
+            border-radius: 10px;}
+    
+    </style>
+</head>
+<body>
+    <h1>Short URL Generator</h1>
+     
+    <div>
+        <form method="POST" action="/url">
+            <label for="url">Enter your Long URL : </label>
+            <input type="text" placeholder="https://example.com" name="url"/>
+            <button type="submit">Genrate URL</button>
+        </form>
+    </div>
+    <% if (locals.id) { %>
+     <p>Url generated : http://localhost:3000/<%= id %></p>
+    <% } %>
+
+   
+</body>
+</html>
